@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/AnandChowdhary/birthday-reminders-action#readme",
   "dependencies": {
+    "@actions/core": "^1.10.0",
     "got": "^12.5.2",
     "unfetch": "^4.2.0",
     "yaml": "^2.1.3",

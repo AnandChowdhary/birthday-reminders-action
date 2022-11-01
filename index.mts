@@ -1,10 +1,11 @@
 import { parse } from "yaml";
 import { readFile } from "node:fs/promises";
 import { z } from "zod";
+import { getInput, setFailed } from "@actions/core";
 import got from "got";
 
 export const app = async () => {
-  const command = process.argv.pop();
+  const command = getInput("command");
   if (command !== "birthdays-today" && command !== "upcoming-birthdays")
     throw new Error("Invalid command");
 
@@ -91,4 +92,4 @@ ${upcomingBirthdays
   }
 };
 
-app();
+app().catch((error) => setFailed(error.message));

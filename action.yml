@@ -4,6 +4,10 @@ author: "Anand Chowdhary <https://github.com/AnandChowdhary>"
 runs:
   using: "node16"
   main: "index.mjs"
+inputs:
+  command:
+    description: "birthdays-today or upcoming-birthdays"
+    required: true
 branding:
   icon: "gift"
   color: "red"
