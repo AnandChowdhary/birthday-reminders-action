@@ -1,0 +1,9 @@
+name: "Birthday Reminders Action"
+description: "Send a Telegram message every day with birthdays"
+author: "Anand Chowdhary <https://github.com/AnandChowdhary>"
+runs:
+  using: "node16"
+  main: "index.mjs"
+branding:
+  icon: "gift"
+  color: "red"
