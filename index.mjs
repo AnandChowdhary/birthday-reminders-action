@@ -23919,11 +23919,12 @@ ${todayBirthdays
 `);
     }
     else {
-        const upcomingBirthdays = nextBirthdays.filter(({ nextBirthday, me }) => !me &&
+        const upcomingBirthdays = nextBirthdays.filter(({ nextBirthday, me, gift }) => !me &&
+            gift &&
             nextBirthday.getTime() - today.getTime() <= 1000 * 60 * 60 * 24 * 10);
         if (upcomingBirthdays.length)
             await send(`
-Upcoming birthdays:
+Upcoming birthdays to buy gifts for:
 ${upcomingBirthdays
                 .map(({ name, year, gift, month, day }) => ` • ${name} - ${[
                 "January",

@@ -6,7 +6,7 @@ Get daily Telegram messages for birthday reminders using GitHub Actions.
 
 ## 🎈 How it works
 
-Using scheduled workflows, you will receive a Telegram message once every day with a list of birthdays, and once every week with upcoming birthdays.
+Using scheduled workflows, you will receive a Telegram message once every day with a list of birthdays, and once every week with upcoming birthdays you should order gifts for.
 
 ## 🛠️ Setup
 
