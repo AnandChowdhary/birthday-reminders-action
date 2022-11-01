@@ -8,7 +8,7 @@
   "description": "",
   "exports": "./index.js",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && ncc build index.mjs -o .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -30,6 +30,7 @@
   },
   "devDependencies": {
     "@types/node": "^18.11.9",
+    "@vercel/ncc": "^0.34.0",
     "typescript": "^4.8.4"
   }
 }
