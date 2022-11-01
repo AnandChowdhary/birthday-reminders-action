@@ -23912,7 +23912,7 @@ const app = async () => {
         const todayBirthdays = yaml.filter(({ day, month }) => month === todayMonth && day === todayDay);
         if (todayBirthdays.length)
             await send(`
-Birthdays today:
+Birthdays today (${today.toLocaleDateString("en-US", { dateStyle: "long" })}):
 ${todayBirthdays
                 .map(({ name, year, me, gift }) => ` • ${name}${year ? ` - ${todayYear - year} years old` : ""}${me ? " - 🎂🎉🎈 happy birthday!" : ""}${gift ? " 🎁" : ""}`)
                 .join("\n")}
@@ -23920,12 +23920,25 @@ ${todayBirthdays
     }
     else {
         const upcomingBirthdays = nextBirthdays.filter(({ nextBirthday, me }) => !me &&
-            nextBirthday.getTime() - today.getTime() <= 1000 * 60 * 60 * 24 * 7);
+            nextBirthday.getTime() - today.getTime() <= 1000 * 60 * 60 * 24 * 10);
         if (upcomingBirthdays.length)
             await send(`
 Upcoming birthdays:
 ${upcomingBirthdays
-                .map(({ name, year, gift }) => ` • ${name}${year ? ` - ${todayYear - year} years old` : ""}${gift ? " 🎁" : ""}`)
+                .map(({ name, year, gift, month, day }) => ` • ${name} - ${[
+                "January",
+                "February",
+                "March",
+                "April",
+                "May",
+                "June",
+                "July",
+                "August",
+                "September",
+                "October",
+                "November",
+                "December",
+            ][month - 1]} ${day}${year ? ` - ${todayYear - year} years old` : ""}${gift ? " 🎁" : ""}`)
                 .join("\n")}
 `);
     }
