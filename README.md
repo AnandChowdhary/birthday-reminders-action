@@ -53,7 +53,7 @@ jobs:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
       - name: Keep alive
-        uses: gautamkrishnar/keepalive-workflow@v1
+        uses: gautamkrishnar/keepalive-workflow@v2
 ```
 
 In the above example, we've also included [gautamkrishnar/keepalive-workflow](https://github.com/gautamkrishnar/keepalive-workflow) to prevent GitHub from disabling scheduled workflows.
