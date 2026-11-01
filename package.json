@@ -27,7 +27,7 @@
     "got": "^12.5.2",
     "unfetch": "^4.2.0",
     "yaml": "^2.8.3",
-    "zod": "^3.22.3"
+    "zod": "^4.6.6"
   },
   "devDependencies": {
     "@types/node": "^18.11.9",
